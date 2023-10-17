@@ -142,4 +142,6 @@ cap_d = cap(pd, K)   #专用车道通行能力
 cap_g = (N-Nd)*cap(pg, K)   #通用车道通行能力
 v_d = vel(Dd, cap_d)
 v_g = vel(Dg, cap_g)
-fuel_d = fuel_emission(i, v)
+fuel_d = fuel_emission(0, v_d)
+fuel_g = fuel_emission(0, v_g)
+fuel_road = (fuel_d*Dd + fuel_g*Dg)/D
